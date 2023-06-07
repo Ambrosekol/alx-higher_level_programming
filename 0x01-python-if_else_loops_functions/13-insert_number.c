@@ -29,7 +29,6 @@ listint_t *insert_node(listint_t **head, int number)
     while (currentItem != NULL)
     {
         prevItem = currentItem;
-        printf("%d: ", currentItem->n);
         currentItem = prevItem->next;
         if ((newItem->n > prevItem->n) && (newItem->n < currentItem->n))
         {
