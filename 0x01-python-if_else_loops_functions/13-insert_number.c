@@ -20,11 +20,11 @@ listint_t *insert_node(listint_t **head, int number)
             prevItem->next = newItem;
             newItem->next = currentItem;
         }
-        else
+       /* else
         {
             prevItem->next = newItem;
-        }
+        }*/
     }
-    return (newItem);
+    return (*head);
 
 }
