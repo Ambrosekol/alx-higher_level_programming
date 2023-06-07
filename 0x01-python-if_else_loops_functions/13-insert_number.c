@@ -1,11 +1,13 @@
 #include "lists.h"
+#include <stdio.h>
 listint_t *insert_node(listint_t **head, int number)
 {
     listint_t *newItem;
-    listint_t *currentItem;
-    listint_t *prevItem;
+    listint_t *currentItem, *prevItem;
+    listint_t *mainval;
 
     currentItem = *head;
+    mainval = *head;
     newItem = malloc(sizeof(listint_t));
     if (newItem == NULL)
         return (NULL);
@@ -16,20 +18,34 @@ listint_t *insert_node(listint_t **head, int number)
         *head = newItem;
         return (newItem);
     }
+    /*while (mainval != NULL)
+    {
+        if ((mainval->next == NULL) && (mainval->n < newItem->n))
+        {
+           mainval->next = newItem;
+        }
+        mainval = mainval->next;
+    }*/
     while (currentItem != NULL)
     {
         prevItem = currentItem;
-        currentItem = currentItem->next;
-        if ((newItem->n >= prevItem->n) && (newItem->n <= currentItem->n))
+        printf("%d: ", currentItem->n);
+        currentItem = prevItem->next;
+        if ((newItem->n > prevItem->n) && (newItem->n < currentItem->n))
         {
             prevItem->next = newItem;
             newItem->next = currentItem;
         }
-        /*else
+        else if (prevItem->n == newItem->n)
         {
             prevItem->next = newItem;
-        }*/
+            newItem->next = currentItem;
+        }
+        else if (mainval->n > newItem->n)
+        {
+            newItem->next = mainval;
+            *head = newItem;
+        }
     }
     return (newItem);
-
 }
