@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
-    import sys
-    argc = sys.argv.__len__()
-    argv = sys.argv
+    from sys import argv
+    argc = argv.__len__()
+    argv = argv
     if argc == 1:
         argc = 0
     print("{} arguments:".format(argc - 1) if argc > 0
