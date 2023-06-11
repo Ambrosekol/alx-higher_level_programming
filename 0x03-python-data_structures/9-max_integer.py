@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
     if len(my_list) == 0:
-        return 0
+        return "None"
     else:
         point = 0
         end = len(my_list)
