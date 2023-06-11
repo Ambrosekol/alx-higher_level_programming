@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-multiple_returns = __import__('8-multiple_returns').multiple_returns
+max_integer = __import__('9-max_integer').max_integer
 
-sentence = ""
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))
+my_list = [1, 90, 2, 13, 34, 5, 0, 0]
+max_integer(my_list)
