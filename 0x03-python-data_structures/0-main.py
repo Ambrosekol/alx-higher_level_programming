@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-print_matrix_integer = __import__('8-multiple_returns').multiple_returns
+multiple_returns = __import__('8-multiple_returns').multiple_returns
 
-lol = print_matrix_integer("Ambrose")
-print(lol)
+sentence = "At school, I learnt C!"
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
