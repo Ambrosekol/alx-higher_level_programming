@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-max_integer = __import__('9-max_integer').max_integer
+print_reversed_list_integer = __import__('3-print_reversed_list_integer').print_reversed_list_integer
 
-my_list = [1, 90, 2, 13, 34, 5, 0, 0]
-max_integer(my_list)
+my_list = [1, 2, 3, 4, 5]
+print_reversed_list_integer(my_list)
