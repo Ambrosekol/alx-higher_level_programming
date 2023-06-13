@@ -21,6 +21,10 @@ int is_palindrome(listint_t **head)
 		indx += 1;
 		arry = arry->next;
 	}
+	if (indx == 1)
+	{
+		return (1);
+	}
 	prev = indx - 1;
 	while (fwd < (indx / 2))
 	{
