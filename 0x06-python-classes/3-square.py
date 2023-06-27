@@ -10,7 +10,9 @@ class Square:
     """
     This now a Square class with the size initialization and also
     this checks if the size variable is an int or less than 0.
-    That is all this is supposed to do.
+
+    A new public instance method is added in order to calculate the
+    area of a square.
     """
     def __init__(self, size=0):
         if type(size) != int:
@@ -21,4 +23,5 @@ class Square:
             self.__size = size
 
     def area(self):
+        """This calculates the area of the square"""
         return self.__size * self.__size
