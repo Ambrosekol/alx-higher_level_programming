@@ -55,6 +55,7 @@ class Square:
             self.__position = value
 
     def my_print(self):
+        """This prints the values of the square"""
         for _ in range(self.__position[1]):
             print()
         for _ in range(self.__size):
