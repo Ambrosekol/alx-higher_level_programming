@@ -11,11 +11,11 @@ class Square:
     This now a Square class with the size initialization and also
     this checks if the size variable is an int or less than 0.
 
-    A new public instance method caleed 'area' is added in order to calculate the
-    area of a square.
+    A new public instance method caleed 'area' is added in order
+    to calculate the area of a square.
 
-    A new public instance method caleed 'my_print' is added in order to print the
-    square to stdout
+    A new public instance method caleed 'my_print' is added in
+    order to print the square to stdout
     """
     def __init__(self, size=0):
         if type(size) != int:
