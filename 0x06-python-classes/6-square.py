@@ -8,8 +8,9 @@ This is task 3 and that is all this module will handle
 
 class Square:
     """
-    This now a Square class with the size initialization and also
-    this checks if the size variable is an int or less than 0.
+    This now a Square class with the size and position initialization
+    and also this checks if the size and position variables is an int
+    or less than 0.
 
     A new public instance method caleed 'area' is added in order
     to calculate the area of a square.
