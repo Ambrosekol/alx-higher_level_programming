@@ -31,7 +31,12 @@ class Square:
         """This is the class property getter"""
         return self.__size
 
-    @property.setter
+    @size.setter
     def size(self, value):
         """This is the class property setter"""
-        self.__size = value
+        if type(value) != int:
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
