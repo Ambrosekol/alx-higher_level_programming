@@ -1,4 +1,4 @@
-This is a Python test for ``adding intigers`` created for ALX High level programming
+This is a Python test for ``adding intigers.py`` created for ALX High level programming
 ###################################################
 
 Using ``add_integer(a, b)`` found in ../0-add_integer.py
