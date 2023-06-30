@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 This is a Module to add two different numbers together. They can either
-be a float or an int and returns the sum
+be a float or an int and returns the sum. It also checks for common errors
+and throws them
 """
 
 

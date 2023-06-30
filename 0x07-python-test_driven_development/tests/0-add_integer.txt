@@ -1,7 +1,7 @@
 This is a Python test for ``adding intigers`` created for ALX High level programming
 ###################################################
 
-Using ``add_integer()`` found in ../0-add_integer.py
+Using ``add_integer(a, b)`` found in ../0-add_integer.py
 
 ----------------------------------------------------
 
@@ -11,7 +11,7 @@ First import the add_integer.py module from ../0-add_integer.py
     >>> sys.path.append('..')
     >>> add_integer = __import__("0-add_integer").add_integer
 
-now use it:
+Now, use it:
 
 ### Testing against a float value
     >>> add_integer(12.0, 10)
