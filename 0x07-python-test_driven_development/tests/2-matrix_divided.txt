@@ -18,6 +18,11 @@ Now, use it:
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
     >>> matrix_divided([1,'a',2,3,4], 1)
     Traceback (most recent call last):
         ...
@@ -50,3 +55,6 @@ Now, use it:
 
     >>> matrix_divided([[1,2,3,4], [1,2,3,4]], 1)
     [[1.0, 2.0, 3.0, 4.0], [1.0, 2.0, 3.0, 4.0]]
+
+    >>> matrix_divided([[1,2,3,4],[1,2,3,4]], 3)
+    [[0.33, 0.67, 1.0, 1.33], [0.33, 0.67, 1.0, 1.33]]
