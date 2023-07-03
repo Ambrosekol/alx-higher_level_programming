@@ -22,7 +22,7 @@ class Rectangle:
                 rect += "#" * self.__width + "\n"
             return rect
         else:
-            rect
+            return ""
 
     @property
     def width(self):
