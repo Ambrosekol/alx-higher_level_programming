@@ -15,7 +15,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         if self.__height > 0 and self.__width > 0:
@@ -27,7 +27,7 @@ class Rectangle:
             return ""
 
     def __del__(self):
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     def __repr__(self):
