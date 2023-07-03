@@ -2,14 +2,13 @@
 """
 This is a module containing the class for a rectangle.
 
-It contains nothing except pass
+It contains the getter and setter for the class also
 """
 
 
 class Rectangle:
     """
-    This is an empty class containing nothing but the pass
-    command to enable it throw no error
+    This lays a template for the object to be created
     """
 
     def __init__(self, width=0, height=0):
