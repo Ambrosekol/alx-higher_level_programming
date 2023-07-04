@@ -32,9 +32,9 @@ class Rectangle:
             rect = ""
             for val in range(self.__height):
                 if val < (self.__height - 1):
-                    rect += "#" * self.__width + "\n"
+                    rect += Rectangle.print_symbol * self.__width + "\n"
                 else:
-                    rect += "#" * self.__width
+                    rect += Rectangle.print_symbol * self.__width
             return rect
         else:
             return ""

@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-Rectangle = __import__('4-rectangle').Rectangle
+Rectangle = __import__('7-rectangle').Rectangle
 
-my_rectangle = Rectangle(2, 4)
-my_rectangle_rep = repr(my_rectangle)
-
-new_rectangle = eval(my_rectangle_rep)
-print(repr(new_rectangle))
+Rectangle.print_symbol = "k"
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
