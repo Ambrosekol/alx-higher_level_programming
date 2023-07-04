@@ -14,9 +14,18 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
-        Rectangle.number_of_instances += 1
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif type(height) != int:
+            raise TypeError("height must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__width = width
+            self.__height = height
+            Rectangle.number_of_instances += 1
 
     def __str__(self):
         if self.__height > 0 and self.__width > 0:
