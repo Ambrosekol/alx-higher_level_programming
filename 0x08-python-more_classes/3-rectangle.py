@@ -28,7 +28,10 @@ class Rectangle:
         if self.__height > 0 and self.__width > 0:
             rect = ""
             for val in range(self.__height):
-                rect += "#" * self.__width + "\n"
+                if val < (self.__height - 1):
+                    rect += "#" * self.__width + "\n"
+                else:
+                    rect += "#" * self.__width
             return rect
         else:
             return ""
