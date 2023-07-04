@@ -30,7 +30,10 @@ class Rectangle:
         if self.__height > 0 and self.__width > 0:
             rect = ""
             for val in range(self.__height):
-                rect += "#" * self.__width + "\n"
+                if val < (self.__height - 1):
+                    rect += "#" * self.__width + "\n"
+                else:
+                    rect += "#" * self.__width
             return rect
         else:
             return ""
@@ -40,7 +43,7 @@ class Rectangle:
         print("Bye rectangle...")
 
     def __repr__(self):
-        return "Rectangle(" + str(self.__width) + ","\
+        return "Rectangle(" + str(self.__width) + ", "\
             + str(self.__height) + ")"
 
     @property
