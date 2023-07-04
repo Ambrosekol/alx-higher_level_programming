@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-Rectangle = __import__('1-rectangle').Rectangle
+Rectangle = __import__('4-rectangle').Rectangle
 
-try:
-    my_rectangle = Rectangle(2, -3)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+my_rectangle = Rectangle(2, 4)
+my_rectangle_rep = repr(my_rectangle)
 
-try:
-    my_rectangle = Rectangle(-2, 3)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+new_rectangle = eval(my_rectangle_rep)
+print(repr(new_rectangle))
