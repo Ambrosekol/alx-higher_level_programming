@@ -1,7 +1,0 @@
-#!/bin/bash
-git pull
-echo "Commit Message:"
-read mesg
-git add *
-git commit -m "$mesg"
-git push
