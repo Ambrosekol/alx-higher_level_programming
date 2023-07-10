@@ -11,7 +11,7 @@ These tests above navigates to the directory and import the class
     >>> newlist.append(10)
     >>> print(newlist)
     [45, 10]
-    >>> print(newlist.print_sorted()) # doctest: +NORMALIZE_WHITESPACE
+    >>> newlist.print_sorted() # doctest: +NORMALIZE_WHITESPACE
     [10, 45]
     None
     >>> secnd = MyList()
@@ -21,4 +21,3 @@ These tests above navigates to the directory and import the class
     Traceback (most recent call last):
         ...
     TypeError: 'MyList' object is not callable
-    
