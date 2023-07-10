@@ -11,6 +11,6 @@ These tests above navigates to the directory and import the class
     >>> newlist.append(10)
     >>> print(newlist)
     [45, 10]
-    >>> print(newlist.print_sorted())
+    >>> print(newlist.print_sorted()) # doctest: +NORMALIZE_WHITESPACE
     [10, 45]
-    
+    None
