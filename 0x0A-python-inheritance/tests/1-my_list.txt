@@ -14,3 +14,11 @@ These tests above navigates to the directory and import the class
     >>> print(newlist.print_sorted()) # doctest: +NORMALIZE_WHITESPACE
     [10, 45]
     None
+    >>> secnd = MyList()
+    >>> print(secnd)
+    []
+    >>> print(secnd(None))
+    Traceback (most recent call last):
+        ...
+    TypeError: 'MyList' object is not callable
+    
