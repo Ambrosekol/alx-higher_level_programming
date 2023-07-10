@@ -12,6 +12,9 @@ class MyList(list):
     but sorted (ascending sort)
     """
     def print_sorted(self):
-        """This function prints a sorted list"""
+        """
+        This function prints a sorted list and that is all
+        it does
+        """
         srtlist = sorted(self)
         print(srtlist)
