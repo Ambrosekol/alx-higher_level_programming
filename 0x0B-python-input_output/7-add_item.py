@@ -12,11 +12,11 @@ if __name__ == "__main__":
     loadtojson = __import__("6-load_from_json_file").load_from_json_file
 
     args = [item for item in sys.argv[1:]]
-    
+
     try:
         loaded_json = loadtojson("add_item.json")
-    except:
+    except FileNotFoundError:
         loaded_json = []
-    
+
     arguments = args + loaded_json
     savetojson(arguments, "add_item.json")
