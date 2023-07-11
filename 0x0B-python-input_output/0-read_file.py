@@ -10,5 +10,6 @@ def read_file(filename=""):
     """
     This function reads a file name and prints to stdout
     """
-    with open(filename, encoding="UTF-8") as newfile:
-        newfile.read()
+    if filename is not None:
+        with open(filename, encoding="UTF-8") as newfile:
+            newfile.read()
