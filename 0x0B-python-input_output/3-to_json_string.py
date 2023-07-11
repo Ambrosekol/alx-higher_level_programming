@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 import json
 """
-This module contains all a function that returns an object
-(Python data structure) represented by a JSON string
+This module contains all a a function that returns the
+JSON representation of an object (string)
 """
 
 
-def from_json_string(my_str):
+def to_json_string(my_str):
     """
-    this accepts an object and then returns an object
-    (Python data structure) represented by a JSON string
+    this accepts an object and then the function
+    returns the JSON representation of an object (string)
     """
     return json.dump(my_str)
