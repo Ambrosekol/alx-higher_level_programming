@@ -8,9 +8,6 @@ object
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """
     this function returns the dictionary description with
