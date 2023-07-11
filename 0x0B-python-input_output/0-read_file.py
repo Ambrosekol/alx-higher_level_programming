@@ -12,4 +12,5 @@ def read_file(filename=""):
     """
     if filename is not None:
         with open(filename, encoding="UTF-8") as newfile:
-            print(newfile.read())
+            for line in newfile:
+                print(line, end='')
