@@ -15,4 +15,6 @@ def load_from_json_file(filename):
     """
     if type(filename) is str and filename is not None:
         with open(filename, encoding="UTF-8") as doc:
-            json.loads(doc.read())
+            r_file = doc.read()
+            obj = json.loads(r_file)
+            return obj
