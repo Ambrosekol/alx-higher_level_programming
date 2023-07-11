@@ -12,4 +12,4 @@ def read_file(filename=""):
     """
     if filename is not None:
         with open(filename, encoding="UTF-8") as newfile:
-            newfile.read()
+            print(newfile.read())
