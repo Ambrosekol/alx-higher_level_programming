@@ -101,3 +101,11 @@ class RectangleTestClass(unittest.TestCase):
         local_instance = newInst
         output = "[Rectangle] (5) 4/5 - 10/5"
         self.assertEqual(str(local_instance), output)
+
+    def test_update_info(self):
+        newinst = Rectangle(2, 4, 6, 7, 10)
+        self.assertEqual(newinst.id, 10)
+        newinst.update(1, 2, 3, 4, 5)
+        self.assertTrue(newinst.height == 3, True)
+        self.assertTrue(newinst.id == 1, True)
+        self.assertTrue(newinst.area() == 6, True)
