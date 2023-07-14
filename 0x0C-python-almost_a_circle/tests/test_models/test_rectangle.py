@@ -58,3 +58,9 @@ class RectangleTestClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             localinst.height, localinst.width = (noneVal, noneVal)
             localinst.x, localinst.y = (noneVal, noneVal)
+
+    def test_area_functionality(self):
+        newLocalInst = Rectangle(90, 2, 0, 0, 1003)
+        area = newLocalInst.area
+        self.assertEqual(area, 1800)
+        self.assertEqual(newLocalInst.id, 1003)
