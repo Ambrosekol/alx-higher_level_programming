@@ -15,19 +15,19 @@ class RectangleTestClass(unittest.TestCase):
     This is the class that performs the test
     """
 
-    newInst = Rectangle(10, 5, 4, 5)
-
     def test_input_for_rectangle(self):
         """
         This tests the input for rectangle class
         """
-        self.assertEqual(RectangleTestClass.newInst.id, 1)
+        newInst = Rectangle(10, 5, 4, 5)
+        self.assertEqual(newInst.id, 3)
 
     def test_setter_for_rectangle(self):
         """
         This tests the setter function for the rectangle
         """
-        localval = RectangleTestClass.newInst
+        newInst = Rectangle(10, 5, 4, 5)
+        localval = newInst
         newval_h = 3
         newval_w = 2
         newval_x = 0
@@ -52,7 +52,8 @@ class RectangleTestClass(unittest.TestCase):
         """
         This tests for the wrong value and wrong type
         """
-        localinst = RectangleTestClass.newInst
+        newInst = Rectangle(10, 5, 4, 5)
+        localinst = newInst
         wrngTyp = "3"
         wrngVal = -1
         noneVal = None
@@ -71,12 +72,18 @@ class RectangleTestClass(unittest.TestCase):
             localinst.x, localinst.y = (noneVal, noneVal)
 
     def test_area_functionality(self):
+        """
+        Find area of the rectangle
+        """
         newLocalInst = Rectangle(90, 2, 0, 0, 1003)
         area = newLocalInst.area()
         self.assertEqual(area, 180)
         self.assertEqual(newLocalInst.id, 1003)
 
     def test_display_of_rectangle(self):
+        """
+        Test the display of rectangle
+        """
         localvar = Rectangle(2, 2)
         pipedOutput = StringIO()
         system.stdout = pipedOutput
@@ -85,3 +92,12 @@ class RectangleTestClass(unittest.TestCase):
         system.stdout = system.__stdout__
         testoutput = "##\n##\n"
         self.assertEqual(output, testoutput)
+
+    def test_string_repersentation(self):
+        """
+        Tests the string representation of the instance
+        """
+        newInst = Rectangle(10, 5, 4, 5)
+        local_instance = newInst
+        output = "[Rectangle] (5) 4/5 - 10/5"
+        self.assertEqual(str(local_instance), output)
