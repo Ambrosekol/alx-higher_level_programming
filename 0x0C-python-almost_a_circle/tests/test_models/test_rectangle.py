@@ -72,9 +72,8 @@ class RectangleTestClass(unittest.TestCase):
 
     def test_area_functionality(self):
         newLocalInst = Rectangle(90, 2, 0, 0, 1003)
-        area = newLocalInst.area
-        print(area)
-        #self.assertEqual(area, 180)
+        area = newLocalInst.area()
+        self.assertEqual(area, 180)
         self.assertEqual(newLocalInst.id, 1003)
 
     def test_display_of_rectangle(self):
