@@ -14,14 +14,23 @@ class TestBaseClass(unittest.TestCase):
     """
 
     def test_initVal_without_args(self):
+        """
+        Tests the init value for Base class without args
+        """
         newInst = Base()
         self.assertEqual(newInst.id, 2)
 
     def test_initVal_with_arg(self):
+        """
+        Tests the init value for Base class with args
+        """
         newInst = Base(121)
         self.assertEqual(newInst.id, 121)
 
     def test_to_json_string(self):
+        """
+        Tests from object to json string
+        """
         testItem = {
             'x': 2,
             'width': 10,
@@ -35,6 +44,9 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(type(newresp) == str)
 
     def test_save_to_file(self):
+        """
+        Tests save to file
+        """
         Square.save_to_file([Square(10, 2, 3, 20), Square(1, 4, 6, 80)])
         with open("Square.json", mode="r") as file:
             ioInstance = StringIO()
@@ -47,6 +59,9 @@ class TestBaseClass(unittest.TestCase):
             self.assertEqual(output, testValues)
 
     def test_from_json_string(self):
+        """
+        Tests from json String
+        """
         input1 = [
             {
                 'id': 89,
@@ -68,6 +83,9 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(input2 == TestVal2)
 
     def test_create_rectangle(self):
+        """
+        Tests to create a Rectangle
+        """
         rectangle_dict = {'id': 1, 'width': 5, 'height': 3, 'x': 2, 'y': 4}
         rectangle = Rectangle.create(**rectangle_dict)
         self.assertEqual(rectangle.id, rectangle_dict['id'])
@@ -75,3 +93,27 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(rectangle.height, rectangle_dict['height'])
         self.assertEqual(rectangle.x, rectangle_dict['x'])
         self.assertEqual(rectangle.y, rectangle_dict['y'])
+
+    def test_load_from_file(self):
+        """
+        Tests to load from file
+        """
+        r1 = Rectangle(10, 5)
+        r2 = Rectangle(7, 3)
+        s1 = Square(4)
+        Rectangle.save_to_file([r1, r2])
+        Square.save_to_file([s1])
+        rectangles = Rectangle.load_from_file()
+        squares = Square.load_from_file()
+
+        self.assertEqual(len(rectangles), 2)
+        self.assertEqual(len(squares), 1)
+
+        self.assertEqual(rectangles[0].id, 3)
+        self.assertEqual(rectangles[0].width, 10)
+        self.assertEqual(rectangles[0].height, 5)
+        self.assertEqual(rectangles[1].id, 4)
+        self.assertEqual(rectangles[1].width, 7)
+        self.assertEqual(rectangles[1].height, 3)
+        self.assertEqual(squares[0].id, 5)
+        self.assertEqual(squares[0].size, 4)

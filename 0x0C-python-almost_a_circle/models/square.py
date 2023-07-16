@@ -35,6 +35,9 @@ class Square(Rectangle):
             self.width = value
 
     def update(self, *args, **kwargs):
+        """
+        Updates the value of the Square
+        """
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -49,6 +52,9 @@ class Square(Rectangle):
                 setattr(self, key, val)
 
     def to_dictionary(self):
+        """
+        Converts the object to a dictinoary
+        """
         return {
             "id": self.id,
             "size": self.size,

@@ -93,15 +93,24 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """
+        Finds the area
+        """
         return self.__height * self.__width
 
     def display(self):
+        """
+        Prints the visual of the object
+        """
         for space in range(self.__y):
             print()
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
     def update(self, *args, **kwargs):
+        """
+        Updates the value of the rectangle
+        """
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -117,5 +126,8 @@ class Rectangle(Base):
                 setattr(self, key, val)
 
     def to_dictionary(self):
+        """
+        Converts the object to a dictinoary
+        """
         return {"x": self.x, "y": self.y,
                 "id": self.id, "height": self.height, "width": self.width}
