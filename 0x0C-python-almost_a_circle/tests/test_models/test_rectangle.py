@@ -71,7 +71,6 @@ class RectangleTestClass(unittest.TestCase):
         with self.assertRaises(TypeError):
             localinst.height, localinst.width = (noneVal, noneVal)
             localinst.x, localinst.y = (noneVal, noneVal)
-            
 
     def test_area_functionality(self):
         """
