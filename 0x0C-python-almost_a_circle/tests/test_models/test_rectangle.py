@@ -66,7 +66,6 @@ class RectangleTestClass(unittest.TestCase):
             localinst.width, localinst.height = (wrngVal, wrngVal)
             localinst.x, localinst.y = (wrngVal, wrngVal)
             localinst.update(lol=10)
-            print("Hello")
 
         with self.assertRaises(TypeError):
             localinst.height, localinst.width = (noneVal, noneVal)
@@ -104,6 +103,9 @@ class RectangleTestClass(unittest.TestCase):
         self.assertEqual(str(local_instance), output)
 
     def test_update_info(self):
+        """
+        This tests the update info for the class
+        """
         newinst = Rectangle(2, 4, 6, 7, 10)
         self.assertEqual(newinst.id, 10)
         newinst.update(1, 2, 3, 4, 5)
@@ -113,3 +115,19 @@ class RectangleTestClass(unittest.TestCase):
         newinst.update(height=10, x=3, id=5)
         self.assertTrue(newinst.height == 10, True)
         self.assertTrue(newinst.id == 5, True)
+
+    def test_to_dict(self):
+        """
+        This tests the object regarding the expression of
+        the dictionary representation of a Rectangle
+        """
+        newInst = Rectangle(10, 10, id=50)
+        self.assertTrue(type(newInst.to_dictionary()) == dict)
+        dict_local = {
+            "id": newInst.id,
+            "width": newInst.width,
+            "height": newInst.height,
+            "x": newInst.x,
+            "y": newInst.y
+            }
+        self.assertDictEqual(dict_local, newInst.to_dictionary())
