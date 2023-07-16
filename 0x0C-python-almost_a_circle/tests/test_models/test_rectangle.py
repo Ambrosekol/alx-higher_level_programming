@@ -52,8 +52,7 @@ class RectangleTestClass(unittest.TestCase):
         """
         This tests for the wrong value and wrong type
         """
-        newInst = Rectangle(10, 5, 4, 5)
-        localinst = newInst
+        localinst = Rectangle(10, 5, 4, 5)
         wrngTyp = "3"
         wrngVal = -1
         noneVal = None
@@ -66,10 +65,13 @@ class RectangleTestClass(unittest.TestCase):
         with self.assertRaises(ValueError):
             localinst.width, localinst.height = (wrngVal, wrngVal)
             localinst.x, localinst.y = (wrngVal, wrngVal)
+            localinst.update(lol=10)
+            print("Hello")
 
         with self.assertRaises(TypeError):
             localinst.height, localinst.width = (noneVal, noneVal)
             localinst.x, localinst.y = (noneVal, noneVal)
+            
 
     def test_area_functionality(self):
         """
@@ -109,3 +111,6 @@ class RectangleTestClass(unittest.TestCase):
         self.assertTrue(newinst.height == 3, True)
         self.assertTrue(newinst.id == 1, True)
         self.assertTrue(newinst.area() == 6, True)
+        newinst.update(height=10, x=3, id=5)
+        self.assertTrue(newinst.height == 10, True)
+        self.assertTrue(newinst.id == 5, True)
