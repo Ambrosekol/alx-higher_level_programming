@@ -2,6 +2,7 @@
 import unittest
 from models.base import Base
 from models.square import Square
+from models.rectangle import Rectangle
 import sys as system
 from io import StringIO
 
@@ -14,7 +15,7 @@ class TestBaseClass(unittest.TestCase):
 
     def test_initVal_without_args(self):
         newInst = Base()
-        self.assertEqual(newInst.id, 1)
+        self.assertEqual(newInst.id, 2)
 
     def test_initVal_with_arg(self):
         newInst = Base(121)
@@ -65,3 +66,12 @@ class TestBaseClass(unittest.TestCase):
         TestVal2 = Base.from_json_string(stringrepr2)
         self.assertTrue(input1 == TestVal)
         self.assertTrue(input2 == TestVal2)
+
+    def test_create_rectangle(self):
+        rectangle_dict = {'id': 1, 'width': 5, 'height': 3, 'x': 2, 'y': 4}
+        rectangle = Rectangle.create(**rectangle_dict)
+        self.assertEqual(rectangle.id, rectangle_dict['id'])
+        self.assertEqual(rectangle.width, rectangle_dict['width'])
+        self.assertEqual(rectangle.height, rectangle_dict['height'])
+        self.assertEqual(rectangle.x, rectangle_dict['x'])
+        self.assertEqual(rectangle.y, rectangle_dict['y'])

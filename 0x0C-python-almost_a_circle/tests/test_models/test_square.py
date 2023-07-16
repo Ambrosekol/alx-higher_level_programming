@@ -44,7 +44,7 @@ class TestSquareClass(unittest.TestCase):
         Tests the string representation of the object
         """
         newlocalInst = Square(2)
-        self.assertTrue(str(newlocalInst) == "[Square] (9) 0/0 - 2", True)
+        self.assertTrue(str(newlocalInst) == "[Square] (10) 0/0 - 2", True)
 
     def test_area(self):
         """
