@@ -112,7 +112,7 @@ class TestSquareClass(unittest.TestCase):
     def test_to_dict(self):
         """
         This tests the object regarding the expression of
-        the dictionary representation of a Rectangle
+        the dictionary representation of a Square
         """
         newInst = Square(10, id=50)
         self.assertTrue(type(newInst.to_dictionary()) == dict)
