@@ -30,7 +30,7 @@ class TestBaseClass(unittest.TestCase):
             }
         resp = Base.to_json_string(testItem)
         self.assertEqual(resp, str([]))
-        newresp = Base.to_json_string(list(testItem))
+        newresp = Base.to_json_string([testItem])
         self.assertTrue(type(newresp) == str)
 
     def test_save_to_file(self):
@@ -44,3 +44,24 @@ class TestBaseClass(unittest.TestCase):
             testValues = "[{\"id\": 20, \"size\": 10, \"x\": 2, \"y\": 3\
 }, {\"id\": 80, \"size\": 1, \"x\": 4, \"y\": 6}]\n"
             self.assertEqual(output, testValues)
+
+    def test_from_json_string(self):
+        input1 = [
+            {
+                'id': 89,
+                'width': 10,
+                'height': 4
+                },
+            {
+                'id': 7,
+                'width': 1,
+                'height': 7
+                }
+            ]
+        input2 = []
+        stringrepr = Base.to_json_string(input1)
+        stringrepr2 = Base.to_json_string(input2)
+        TestVal = Base.from_json_string(stringrepr)
+        TestVal2 = Base.from_json_string(stringrepr2)
+        self.assertTrue(input1 == TestVal)
+        self.assertTrue(input2 == TestVal2)

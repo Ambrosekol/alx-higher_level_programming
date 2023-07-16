@@ -33,3 +33,10 @@ class Base:
                 newfile.write(cls.to_json_string(
                     [x.__getattribute__("to_dictionary")()
                         for x in list_objs if type(x) is cls]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if type(json_string) is str and json_string is not None:
+            return json.loads(json_string)
+        else:
+            return []
