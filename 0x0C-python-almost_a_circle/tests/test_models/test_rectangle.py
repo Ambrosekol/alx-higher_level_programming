@@ -21,6 +21,9 @@ class RectangleTestClass(unittest.TestCase):
         """
         newInst = Rectangle(10, 5, 4, 5)
         self.assertEqual(newInst.id, 10)
+        with self.assertRaises(TypeError):
+             new = Rectangle(1, "2")
+            
 
     def test_setter_for_rectangle(self):
         """
