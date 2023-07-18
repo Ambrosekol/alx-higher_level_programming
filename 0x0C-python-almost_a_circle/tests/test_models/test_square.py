@@ -105,7 +105,7 @@ class TestSquareClass(unittest.TestCase):
         self.assertTrue(newinst.id == 2, True)
         self.assertTrue(newinst.area() == 16, True)
         newinst.update(height=10, x=3, id=5)
-        self.assertTrue(newinst.height == 10, True)
+        self.assertTrue(newinst.height == 4, True)
         self.assertTrue(newinst.id == 5, True)
         self.assertEqual(newinst.size == 4, True)
 
