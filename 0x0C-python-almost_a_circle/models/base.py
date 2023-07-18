@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-
 """
 This is a file for the base class
 """
