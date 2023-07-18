@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
 """
 This is a file for the base class. it contains all code relating
 to the base class. it also has some inbuilt methods
 """
+import json
 
 
 class Base:
