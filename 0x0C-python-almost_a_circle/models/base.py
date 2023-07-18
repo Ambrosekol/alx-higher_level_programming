@@ -39,6 +39,9 @@ class Base:
                 newfile.write(cls.to_json_string(
                     [x.__getattribute__("to_dictionary")()
                         for x in list_objs if type(x) is cls]))
+        else:
+            with open(cls.__name__+".json", mode="w") as newfile:
+                newfile.write("[]")
 
     @staticmethod
     def from_json_string(json_string):
