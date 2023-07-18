@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-
-from models.rectangle import Rectangle
-
-
 """
 This is a module containing the code for the Square class.
 """
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
