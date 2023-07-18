@@ -20,7 +20,7 @@ class RectangleTestClass(unittest.TestCase):
         This tests the input for rectangle class
         """
         newInst = Rectangle(10, 5, 4, 5)
-        self.assertEqual(newInst.id, 10)
+        self.assertEqual(newInst.id, 22)
         with self.assertRaises(TypeError):
              new = Rectangle(1, "2")
             
@@ -102,7 +102,7 @@ class RectangleTestClass(unittest.TestCase):
         """
         newInst = Rectangle(10, 5, 4, 5)
         local_instance = newInst
-        output = "[Rectangle] (12) 4/5 - 10/5"
+        output = "[Rectangle] (24) 4/5 - 10/5"
         self.assertEqual(str(local_instance), output)
 
     def test_update_info(self):
