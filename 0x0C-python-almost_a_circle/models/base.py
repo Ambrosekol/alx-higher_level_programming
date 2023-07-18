@@ -7,9 +7,7 @@ to the base class. it also has some inbuilt methods
 
 
 class Base:
-    """
-    This is the base class for the project
-    """
+    """ This is the base class for the project """
     __nb_objects = 0
 
     def __init__(self, id=None):
