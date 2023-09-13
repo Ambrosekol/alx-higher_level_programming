@@ -8,4 +8,4 @@ const Square = class Square extends Rectangle {
   }
 }
 
-module.export = Square;
+exports.Square = Square;
