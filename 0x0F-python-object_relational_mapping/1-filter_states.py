@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 lists all states with starting name with N
 from the database hbtn_0e_0_usa
-'''
+"""
 
 if __name__ == "__main__":
     import MySQLdb
