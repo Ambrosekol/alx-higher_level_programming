@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     db = MySQLdb.connect(port=3306, passwd=argv[2], user=argv[1], db=argv[3],
                          host='localhost')
-    cur = db.curosr()
+    cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
                 'N%'ORDER BY id ASC")
     res = cur.fetchall()
