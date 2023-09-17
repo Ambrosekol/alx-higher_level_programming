@@ -22,5 +22,8 @@ if __name__ == '__main__':
     
     db = MySQLdb.connect(host='localhost', port='3306', user=user_name,
                      passwd=pswrd, db=db_name)
-    db.cursor()
+    cursor = db.cursor()
+    
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    resp = cursor.fetchall()
     
