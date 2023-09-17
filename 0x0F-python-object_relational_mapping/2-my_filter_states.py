@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-
-
-import MySQLdb
-from sys import argv
-
 '''
 Script that lists all states from the database
+This is based on the ALX SE program
 '''
 if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+
     cont = MySQLdb.connect(
         host="localhost", port=3306, user=argv[1],
         password=argv[2], database=argv[3])
@@ -19,3 +18,4 @@ if __name__ == "__main__":
     for i in db:
         if i[1] == argv[4]:
             print(i)
+
