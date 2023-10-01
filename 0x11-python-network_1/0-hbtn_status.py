@@ -9,10 +9,8 @@ You must use a with statement
 """
 import urllib.request
 
-if __name__ == '__main__':
-
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as r:
-        response = r.read()
-        print("\t - type: {}".format(type(response)))
-        print("\t - content: {}".format(response))
-        print("\t - utf8 content: {}".format(response.decode('utf-8')))
+with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as r:
+    response = r.read()
+    print("\t - type: {}".format(type(response)))
+    print("\t - content: {}".format(response))
+    print("\t - utf8 content: {}".format(response.decode('utf-8')))
