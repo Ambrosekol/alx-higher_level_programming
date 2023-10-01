@@ -11,12 +11,10 @@ if __name__ == "__main__":
     import urllib.parse as parser
 
     url = system.argv[1]
-    val = {
-        'email' : '{}'.format(system.argv[2])
-        }
+    val = {'email': system.argv[2]}
     par = parser.urlencode(val)
     par = par.encode('ascii')
     reqst = broswer.Request(url, par)
     with broswer.urlopen(reqst) as response:
         res_val = response.read()
-        print(res_val)
+        print(res_val.decode('utf-8'))
